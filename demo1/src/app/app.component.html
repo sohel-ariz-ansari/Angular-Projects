@@ -1,0 +1,36 @@
+<div>
+  <h1>API Data</h1>
+  <section>
+    <div class="row">
+          <div class="col-xxl-3 col-md-6 col-sm-12 mb-4" *ngFor="let product of products">
+            <div class="card">
+              <div class="card-header">
+                <h2>{{ product.title }}</h2>
+              </div>
+              <div class="card-body">
+                <img [src]="product.images" alt="{{ product.title }}" class="img-fluid">
+              </div>
+              <div class="card-footer">
+                <div class="d-flex justify-content-between">
+                  <button class="btn btn-warning">Buy Now</button>
+                  <p>Price: ${{ product.price }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    
+  </section>
+  <!-- <ul *ngFor="let product of products">
+    <li><h2>{{ product.title }}</h2></li>
+    <li><img [src]="product.images" alt="{{ product.title }}" width="150" height="150"></li>
+    <li><p>{{ product.description }}</p></li>
+    <li><p>Category: {{ product.category }}</p></li>
+    <li><p>Price: ${{ product.price }}</p></li>
+    <li><p>Discount: {{ product.discountPercentage }}%</p></li>
+    <li><p>Rating: {{ product.rating }}</p></li>
+    <li><p>Stock: {{ product.stock }}</p></li>
+  </ul> -->
+</div>
+
+<router-outlet></router-outlet>
